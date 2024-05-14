@@ -120,9 +120,9 @@ resource "null_resource" "configure-cat-app" {
 }
 
 module "cloud-storage" {
-  source     = "app.terraform.io/deustchebank/cloud-storage/google"
+  source     = "terraform-google-modules/cloud-storage/google"
   version    = "3.4.1"
-  names      = ["hashicat-private"]
+  names      = ["hashicat"]
   prefix     = var.prefix
   project_id = var.project
 }
